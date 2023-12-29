@@ -50,13 +50,6 @@ title-img: /assets/img/avatar-icon.png
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "ren754203791@126.com"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: 
-  github: https://github.com/RunningFaster
-  twitter: 
-  patreon: 
-  youtube: ""
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
