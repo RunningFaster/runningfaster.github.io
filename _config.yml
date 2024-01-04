@@ -20,11 +20,7 @@ author: Jamie
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  关于我: "aboutme"
 
 ################
 # --- Logo --- #
