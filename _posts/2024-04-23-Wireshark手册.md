@@ -47,6 +47,23 @@ author: Jamie
 
 - ICMP（Internet Control Message Protocol）
 
+#### TCP
+
+- Transmission Control Protocol
+- 三次握手 发起连接
+- 四次挥手 断开连接
+
+#### UDP
+
+- User Datagram Protocol
+
+### 应用层协议
+
+- DHCP（Dynamic Host Configuration Protocol）
+- DNS
+- HTTP
+- SMTP
+
 ## 捕获
 
 - Capture -> Input 条件过滤
@@ -80,5 +97,5 @@ author: Jamie
 - tcpdump -nn 禁用ip地址别名解析
 - tcpdump -nn 禁用ip地址和端口的别名解析
 - tcpdump 'tcp dst port 80' 设置过滤
+- tcpdump 'port 80 and host www.baidu.com' 设置过滤
 - tcpdump -F a.bpf 指定一个负载的过滤器
-
