@@ -5,13 +5,17 @@ subtitle:
 cover-img: 
 thumbnail-img: /assets/img/Wireshark手册/Snipaste_2024-04-23_18-31-22.png
 share-img: 
-tags: [install]
+tags: [Manual]
+comments: true
 author: Jamie
 ---
 
 # Wireshark工具操作
 
 ## 基础知识
+
+{: .box-success}
+tcpdump -i any tcp and port 8080 -s0 -c 1000 -w 33333.cap -vvv
 
 ### 英语
 
