@@ -180,3 +180,77 @@ x/-xx/-X/-XX：以十六进制显示包内容，几个选项只有细微的差�
 w<数据包文件>：直接将包写入文件中，并不分析和打印出来；
 expression：用于筛选的逻辑表达式；
 ```
+
+### 常用参数解释
+
+```bash
+tcpdump -help
+tcpdump version 4.99.1
+libpcap version 1.5.3
+Usage: tcpdump [-AbdDefhHIJKlLnNOpqStuUvxX#] [ -B size ] [ -c count ] [--count]
+                [ -C file_size ] [ -E algo:secret ] [ -F file ] [ -G seconds ]
+                [ -i interface ] [ --immediate-mode ] [ -j tstamptype ]
+                [ -M secret ] [ --number ] [ --print ] [ -Q in|out|inout ]
+                [ -r file ] [ -s snaplen ] [ -T type ] [ --version ]
+                [ -V file ] [ -w file ] [ -W filecount ] [ -y datalinktype ]
+                [ --time-stamp-precision precision ] [ --micro ] [ --nano ]
+                [ -z postrotate-command ] [ -Z user ] [ expression ]
+```
+
+
+-i (interface) 后边跟接口名称，使用 ifconfig -a 查看
+
+如下 eth0 、 lo 表示接口名
+
+
+- c (count)： 指定抓取包的数量
+tcpdump -i lo -c 10 表示对lo接口抓取10个包
+-s0：抓取包长度不受限制 ；
+-v 或者-vv： 显示完整协议指令过程
+-e: 显示链路层头部
+-w: 存储到指定的文件，保存的这个文件一般用wireshark打开
+-x 用十六进制字码列出数据包资料。
+-i 网络接口(需要抓取的网络接口截面)
+-n 不把主机的网络地址转换成名字。
+
+**举例: 抓取 sync接口 10个包 保存在mysync_10p.cap文件，显示链路层头部显示完整协议**
+
+```bash
+tcpdump -i sync -e -vv -c 10 -w mysync_10p.cap
+```
+
+- 基于IP抓取报文: **host 192.168.110.11**
+    
+    ```bash
+    tcpdump -i sync ether host 192.168.110.11 -e -vv -c 10 -w mysync_10p.cap
+    ```
+    
+- 基于Port抓取报文: port 33333
+    
+    ```bash
+    tcpdump -i sync ether port 192.168.110.11 -e -vv -c 10 -w mysync_10p.cap
+    ```
+    
+- 要指定 IP 地址是源地址或是目的地址则使用：
+    
+    ```bash
+    tcpdump src 192.168.174.128 tcpdump dst 192.168.174.2
+    ```
+    
+- 要捕获某个端口或一个范围的数据包，使用：
+    
+    ```bash
+    tcpdump port 80 tcpdump portrange 22-125
+    ```
+    
+- 可以使用 and 或者符号 && 来将两个或多个条件组合起来。比如：
+    
+    ```bash
+    tcpdump src 192.168.174.128 && port 22 -w ssh_packets
+    ```
+    
+- “或”会检查是否匹配命令所列条件中的其中一条，像这样：
+    
+    ```bash
+    tcpdump src 192.168.1.174 or dst 192.168.174.2 && port 22 -w ssh_packets tcpdump port 443 or 80 -w http_packets
+    ```
