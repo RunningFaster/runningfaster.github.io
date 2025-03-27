@@ -3,7 +3,7 @@ layout: post
 title: Logrotate手册
 subtitle: 
 cover-img: 
-thumbnail-img: /assets/img/Dig手册/dig.webp
+thumbnail-img: /assets/img/logrotate.jpeg
 share-img: 
 tags: [install]
 author: Jamie

@@ -3,7 +3,7 @@ layout: post
 title: Docker-compose手册
 subtitle: 
 cover-img: 
-thumbnail-img: /assets/img/Dig手册/dig.webp
+thumbnail-img: /assets/img/docker-compose.png
 share-img: 
 tags: [install]
 author: Jamie
