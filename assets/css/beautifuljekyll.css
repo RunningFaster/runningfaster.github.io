@@ -291,7 +291,7 @@ img {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1400px) {
   .navbar-custom .navbar-collapse {
     border-top: 1px solid {{ site.navbar-border-col | default: "#DDDDDD" }};
     margin: 0 -1rem;
@@ -1028,7 +1028,7 @@ pre {
   border: none;
   padding: 0 3rem;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1400px) {
   #nav-search-input {
     width: 75%;
   }
@@ -1079,7 +1079,7 @@ pre {
   display: none;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1400px) {
   #nav-search-icon {
     display: none;
   }
