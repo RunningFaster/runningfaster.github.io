@@ -4,11 +4,11 @@ title: About me
 subtitle: Who am i?
 ---
 
-### My story
+### 🇨🇳My story
 
 # Self-Introduction
 
-Hello, I'm **Jamie**, born in 1993, and I currently thrive as a seasoned software development engineer. My expertise lies in crafting robust solutions using the dynamic duo of **Golang** and **Python**.
+Hello, I'm **Jamie**, born in 1993, and I currently thrive as a seasoned software development engineer. My expertise lies in crafting robust solutions using the dynamic duo of **C/C++** and **Golang** and **Python**.
 
 ## Professional Background
 
@@ -16,6 +16,7 @@ Hello, I'm **Jamie**, born in 1993, and I currently thrive as a seasoned softwar
 I embarked on my software development journey with a passion for creating efficient and scalable applications. Over the years, I've evolved into a high-level software development engineer, constantly seeking innovative solutions to complex problems.
 
 ### 💻 Tech Stack
+- **C/C++**: Dpdk network.
 - **Golang**: My go-to language for building robust and performant backend systems.
 - **Python**: A versatile tool in my arsenal for scripting, automation, and data manipulation.
 
